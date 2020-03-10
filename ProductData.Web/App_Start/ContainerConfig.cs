@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System.Configuration;
+using System.Web.Http;
 using System.Web.Mvc;
 using Autofac;
 using Autofac.Integration.Mvc;
@@ -6,6 +7,7 @@ using Autofac.Integration.WebApi;
 using ProductData.ApplicationServices.Interface;
 using ProductData.ApplicationServices.Services;
 using ProductData.Data.SqlDataContext;
+using RestSharp;
 
 namespace ProductData.Web
 {
@@ -21,6 +23,13 @@ namespace ProductData.Web
             builder.RegisterType<ProductDataServices>()
                 .As<IProductDataServices>()
                 .InstancePerRequest();
+
+            builder.RegisterType<ProductDataApiServices>()
+                .As<IProductDataApiServices>()
+                .WithParameter(new NamedParameter("baseUri", ConfigurationManager.AppSettings["BaseUri"]));
+
+            builder.RegisterType<RestClient>()
+                .As<IRestClient>();
 
             // MVC
             builder.RegisterControllers(typeof(MvcApplication).Assembly);

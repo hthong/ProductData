@@ -1,0 +1,33 @@
+﻿@model ProductData.ApplicationServices.Entity.MaxPriceItemByName
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Item Details</h2>
+
+<div>
+    <h4>@Model.Name</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaxPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaxPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

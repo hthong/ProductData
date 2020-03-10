@@ -1,4 +1,6 @@
-﻿namespace ProductData.ApplicationServices.Entity
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProductData.ApplicationServices.Entity
 {
     public class MaxPriceItemByName
     {
