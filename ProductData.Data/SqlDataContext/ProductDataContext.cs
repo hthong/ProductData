@@ -15,7 +15,7 @@ namespace ProductData.Data.SqlDataContext
             Database.SetInitializer(new ProductDataInitializer());
         }
 
-        public DbSet<Item> Items { get; set; }
+        public virtual DbSet<Item> Items { get; set; }
        
     }
 }
