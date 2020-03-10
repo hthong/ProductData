@@ -5,9 +5,9 @@ namespace ProductData.Data.SqlDataContext
 {
     public class ProductDataContext: DbContext
     {
-        public ProductDataContext()
+        public ProductDataContext() : this("ProductData")
         {
-            Database.SetInitializer(new ProductDataInitializer());
+            
         }
 
         public ProductDataContext(string nameOrConnectionString) : base(nameOrConnectionString)
@@ -15,7 +15,7 @@ namespace ProductData.Data.SqlDataContext
             Database.SetInitializer(new ProductDataInitializer());
         }
 
-        public DbSet<Item> Items { get; set; }
+        public virtual DbSet<Item> Items { get; set; }
        
     }
 }
