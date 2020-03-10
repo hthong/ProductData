@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entity\Item.cs" />
     <Compile Include="Entity\MaxPriceItemByName.cs" />
     <Compile Include="Factory\PollyFactory.cs" />
     <Compile Include="Interface\IProductDataApiServices.cs" />
