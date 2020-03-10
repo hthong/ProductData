@@ -1,4 +1,4 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductData.ApplicationServices.Tests", "ProductData.ApplicationServices.Tests\ProductData.ApplicationServices.Tests.csproj", "{3ADEECA2-D167-4190-8E9A-2F0B2A111945}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductData.ApplicationServices", "ProductData.ApplicationServices\ProductData.ApplicationServices.csproj", "{28BD3CEB-2CFC-400C-8407-2C02E83F6C6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductData.Web", "ProductData.Web\ProductData.Web.csproj", "{9F6BD04D-4593-4CA4-A050-CB102C478B9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{28BD3CEB-2CFC-400C-8407-2C02E83F6C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28BD3CEB-2CFC-400C-8407-2C02E83F6C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28BD3CEB-2CFC-400C-8407-2C02E83F6C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F6BD04D-4593-4CA4-A050-CB102C478B9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6BD04D-4593-4CA4-A050-CB102C478B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6BD04D-4593-4CA4-A050-CB102C478B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6BD04D-4593-4CA4-A050-CB102C478B9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
