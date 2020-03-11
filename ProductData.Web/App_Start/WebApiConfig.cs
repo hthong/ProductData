@@ -1,4 +1,6 @@
-﻿using System.Web.Http;
+﻿using System.Net.Http.Formatting;
+using System.Web.Http;
+using Newtonsoft.Json.Serialization;
 
 namespace ProductData.Web
 {
@@ -14,7 +16,17 @@ namespace ProductData.Web
                 defaults: new { id = RouteParameter.Optional }
             );
 
-            config.Formatters.Remove(config.Formatters.XmlFormatter);     
+            // Remove stock XML and JSON serializer
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+            config.Formatters.Remove(config.Formatters.JsonFormatter);
+
+            // Add custom JSON formatter.
+            var jsonFormatter = new JsonMediaTypeFormatter
+            {
+                UseDataContractJsonSerializer = false,
+                SerializerSettings = { ContractResolver = new CamelCasePropertyNamesContractResolver() }
+            };
+            config.Formatters.Add(jsonFormatter); 
         }
     }
 }
